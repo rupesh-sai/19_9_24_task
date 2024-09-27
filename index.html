@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th,td {
+        border: 1px solid ;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    div{
+        background-color: yellow;
+        color:gray;
+    }
+    ul{
+        background-color:lightblue;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+<!-- Task 1: Create a Paragraph with Text
+•Objective: Create a <p> element and add it to the document with the text “Welcome to JavaScript DOM manipulation”.
+•Instructions:
+1.Use createElement to create a <p> element.
+2.Set the text using innerText.
+3.Append the paragraph to the body of the document. -->
+<script>
+    let p=document.createElement("p");
+    p.innerText='Welcome to JavaScript DOM manipulation';
+    document.body.appendChild(p);
+    p.style.color="aqua";
+    p.style.background="black";
+    p.style.padding="8px";
+</script>
+
+<!-- Task 2: Create a Div with Two Headings
+•Objective: Create a <div> that contains two headings, <h1> and <h2>, with different text.
+•Instructions:
+1.Use createElement to create a <div>.
+2.Inside the div, create an <h1> with the text “Main Heading” and an <h2> with the text “Subheading”.
+3.Append the headings to the div.
+4.Append the div to the body. -->
+<script>
+    let div=document.createElement("div");
+    document.body.appendChild(div)
+    let h1=document.createElement("h1");
+    h1.innerText="Main heading";
+    div.appendChild(h1);
+    let h2=document.createElement("h2");
+    h2.innerText="Subheading";
+    div.appendChild(h2);
+</script>
+
+<!-- Task 3: Create an Unordered List with Three Items
+•Objective: Create an unordered list (<ul>) with three list items (<li>), each containing different text.
+•Instructions:
+1.Use createElement to create a <ul>.
+2.Create three list items and add them to the unordered list.
+3.Append the list to the body. -->
+<script>
+    let ul=document.createElement("ul");
+    ul.innerHTML="<b>un-orderedlist</b>"
+    document.body.appendChild(ul);
+    let li1=document.createElement("li");
+    li1.innerText="list1";
+    ul.appendChild(li1);
+    let li2=document.createElement("li");
+    li2.innerText="list2";
+    ul.appendChild(li2);
+    let li3=document.createElement("li");
+    li3.innerText="list3";
+    ul.appendChild(li3);
+</script>
+<!-- Task 4: Create a Table with 2 Rows and 2 Columns
+•Objective: Create a table with two rows and two columns, and fill each cell with different text.
+•Instructions:
+1.Use createElement to create a <table>.
+2.Create two rows, each with two columns.
+3.Fill the cells with text and append the table to the body. -->
+<script>
+    let table1=document.createElement('table1');
+    document.body.appendChild(table1);
+    table1.style.backgroundColor="gray";
+    let tra=document.createElement("tr");
+    table1.appendChild(tra);
+    let tha=document.createElement("th");
+    tha.innerText="Name";
+    tra.appendChild(tha);
+    let thb=document.createElement("th");
+    thb.innerText="age";
+    tra.appendChild(thb);
+    let thc=document.createElement("th");
+    thc.innerText="course";
+    tra.appendChild(thc);
+    let trb=document.createElement("tr");
+    table1.appendChild(trb);
+    let tda=document.createElement("td");
+    tda.innerText="Raju";
+    trb.appendChild(tda);
+    let tdb=document.createElement("td");
+    tdb.innerText="22";
+    trb.appendChild(tdb)
+    let tdc=document.createElement("td");
+    tdc.innerText="fullstack";
+    trb.appendChild(tdc)
+    let trc=document.createElement("tr");
+    table1.appendChild(trc);
+    let tba=document.createElement("td");
+    tba.innerText="Lavanya";
+    trc.appendChild(tba);
+    let tbb=document.createElement("td");
+    tbb.innerText="28";
+    trc.appendChild(tbb);
+    let tbc=document.createElement("td");
+    tbc.innerText="back-end";
+    trc.appendChild(tbc);
+</script>
+<br>
+<hr>
+<!-- Task 5: Create a Div with an Image and Caption
+•Objective: Create a div containing an image and a caption below it.
+•Instructions:
+1.Use createElement to create a <div>, <img>, and a <p> for the caption.
+2.Set the src of the image and text of the caption.
+3.Append the image and caption to the div, then append the div to the body. -->
+<script>
+    let div1=document.createElement("div1");
+    document.body.appendChild(div1);
+    let image1=document.createElement("img");
+    image1.src="https://media.istockphoto.com/id/1499410369/photo/warning-icon-on-a-digital-lcd-display-with-reflection.jpg?s=1024x1024&w=is&k=20&c=42vxbCN9iL3l7F1EGUmiLPFAg5lOIpmhh3d_LWWioYQ=";
+    image1.style.borderRadius="50px"
+    div1.appendChild(image1);
+    let caption=document.createElement("figcaption");
+    caption.innerText="Hi !!! \n Hello !!!!";
+    div1.appendChild(caption);
+</script>
+<hr>
+<!-- Task 6: Create a Nested Ordered List
+•Objective: Create an ordered list (<ol>) where the second item contains a nested ordered list with two items.
+•Instructions:
+1.Use createElement to create the main <ol> and list items.
+2.Add a nested <ol> to the second list item.
+3.Append the main and nested lists to the body. -->
+<script>
+    let ol=document.createElement("ol");
+    document.body.appendChild(ol);
+    let lia=document.createElement("li");
+    lia.innerText="orderedlist-1";
+    ol.appendChild(lia);
+    let lib=document.createElement("li");
+    lib.innerText="orderedlist-2"
+    ol.appendChild(lib)
+    let ol1=document.createElement("ol");
+    ol1.innerText="sub-orderedlist-1"
+    lib.appendChild(ol1)
+    let lic=document.createElement("li");
+    lic.innerText="orderedlist-3"
+    ol1.appendChild(lic);
+    let lid=document.createElement("li");
+    lid.innerText="orderedlist-4"
+    ol1.appendChild(lid);
+</script>
+<hr>
+<!-- Task 7: Create a Section with a Heading and Paragraph
+•Objective: Create a section that contains a heading and a paragraph with different text.
+•Instructions:
+1.Use createElement to create a <section>, <h2>, and <p>.
+2.Set the text for the heading and paragraph.
+3.Append them to the section, and then append the section to the body. -->
+<script>
+    let section=document.createElement("section");
+    document.body.appendChild(section);
+    let h3=document.createElement("h3");
+    h3.innerText="Hey this heading";
+    section.appendChild(h3);
+    let p1=document.createElement("p");
+    p1.innerText="Hey this paragraph";
+    section.appendChild(p1);
+    section.style.backgroundColor="lightpink"
+</script>
+<hr>
+<!-- Task 8: Create a Description List
+•Objective: Create a description list (<dl>) with three terms and their corresponding descriptions.
+•Instructions:
+1.Use createElement to create a <dl>.
+2.Create three pairs of <dt> (term) and <dd> (description) elements.
+3.Append the terms and descriptions to the description list, and then append the list to the body. -->
+<script>
+    let dl=document.createElement("dl");
+    dl.style.backgroundColor="gray";
+    document.body.appendChild(dl);
+    let dt=document.createElement("dt");
+    dt.innerText="HTML";
+    dl.appendChild(dt);
+    let dd=document.createElement("dd");
+    dd.innerText="html is a markup language";
+    dl.appendChild(dd);
+    let dt2=document.createElement("dt");
+    dt2.innerText="CSS";
+    dl.appendChild(dt2);
+    let dd2=document.createElement("dd");
+    dd2.innerText="css is a cascaded styling sheet";
+    dl.appendChild(dd2)
+    let dt3=document.createElement("dt");
+    dt3.innerText="JAVSCRIPT";
+    dl.appendChild(dt3);
+    let dd3=document.createElement("dd");
+    dd3.innerText="javascript creates dynamics web pages";
+    dl.appendChild(dd3)
+</script>
+<hr>
+<!-- Task 9: Create a Blockquote Inside a Div
+•Objective: Create a div that contains a blockquote (<blockquote>) with some text.
+•Instructions:
+1.Use createElement to create a <div> and <blockquote>.
+2.Set the text inside the blockquote.
+3.Append the blockquote to the div, and append the div to the body. -->
+<script>
+    let div2=document.createElement("div1");
+    document.body.appendChild(div2);
+    let bq=document.createElement("blockquote");
+    bq.innerText="' Hello there this blockquote '";
+    div2.appendChild(bq);
+</script>
+<hr>
+<!-- Task 10: Create a Div with Multiple Paragraphs
+•Objective: Create a div containing three different paragraphs (<p>), each with different text.
+•Instructions:
+1.Use createElement to create a <div> and three <p> elements.
+2.Set the text for each paragraph.
+3.Append all paragraphs to the div, then append the div to the body. -->
+<script>
+    let div3=document.createElement("div");
+    document.body.appendChild(div3);
+    let pa=document.createElement("p");
+    pa.innerText="paragraph-1"
+    div3.appendChild(pa);
+    let pb=document.createElement("p");
+    pb.innerText="paragraph-2";
+    div3.appendChild(pb);
+    let pc=document.createElement("p");
+    pc.innerText="paragraph-3";
+    div3.appendChild(pc);
+    pc.style.backgroundColor="red";
+    pa.style.backgroundColor="yellow";
+</script>
+</body>
+</html>
